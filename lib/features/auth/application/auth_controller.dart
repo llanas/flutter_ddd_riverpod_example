@@ -23,7 +23,7 @@ class AuthController extends _$AuthController {
     /// listen to auth changes
     repository.authStateChange((user) {
       state = AsyncData(user);
-      _updateAuthState(userEntity);
+      _updateAuthState(user);
     });
     return userEntity;
     // TODO(vh): how to cancel subscription override dispose
